@@ -20,8 +20,8 @@ function ScrollTop() {
   React.useEffect(() => {
     window.scrollTo(0, 0)
     const section = pathname.split('/')[1]
-    const title = section ? section[0].toUpperCase() + section.slice(1) : 'Student silicon design team'
-    document.title = `${title === 'Contact' ? 'Contact us' : title} | UF Silicon`
+    const title = section ? section[0].toUpperCase() + section.slice(1) : ''
+    document.title = title ? `${title === 'Contact' ? 'Contact us' : title} | UF Silicon` : 'UF Silicon'
   }, [pathname])
   return null
 }
